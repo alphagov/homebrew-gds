@@ -7,6 +7,8 @@ class GdsCli < Formula
       :revision => "52cb69e48a6433caac6bf11b584abf796a34aab0"
 
   depends_on "go" => :build
+  tap_name = OS.mac? ? "caskroom/cask" : "linuxbrew/extra"
+  depends_on "#{tap_name}/aws-vault"
 
   def install
     ENV["GOOS"] = OS.mac? ? "darwin" : "linux"
