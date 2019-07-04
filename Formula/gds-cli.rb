@@ -8,6 +8,8 @@ class GdsCli < Formula
   head "git@github.com:alphagov/gds-cli.git", :using => :git
 
   depends_on "go" => :build
+  tap_name = OS.mac? ? "caskroom/cask" : "linuxbrew/extra"
+  depends_on "#{tap_name}/aws-vault"
 
   def install
     ENV["GOOS"] = OS.mac? ? "darwin" : "linux"
