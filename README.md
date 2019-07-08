@@ -12,10 +12,12 @@ A private Homebrew tap for the [gds-cli](https://github.com/alphagov/gds-cli).
 ```
 brew tap alphagov/gds
 brew install gds-cli
+gds --version
 ```
 
 or
 
 ```
 brew install alphagov/gds/gds-cli
+gds --version
 ```
