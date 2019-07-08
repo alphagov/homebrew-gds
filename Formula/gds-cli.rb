@@ -19,6 +19,7 @@ class GdsCli < Formula
     system "go", "generate"
     system "go", "build"
     bin.install "gds-cli"
+    bin.install_symlink({ "gds-cli" => "gds" })
   end
 
   def caveats
@@ -28,6 +29,6 @@ class GdsCli < Formula
   end
 
   test do
-    assert_match("USAGE", shell_output("#{bin}/gds-cli"))
+    assert_match("USAGE", shell_output("#{bin}/gds"))
   end
 end
