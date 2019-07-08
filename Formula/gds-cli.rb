@@ -8,8 +8,9 @@ class GdsCli < Formula
   head "git@github.com:alphagov/gds-cli.git", :using => :git
 
   depends_on "go" => :build
-  tap_name = OS.mac? ? "homebrew/cask" : "linuxbrew/extra"
-  depends_on "#{tap_name}/aws-vault"
+  if OS.linux?
+    depends_on "linuxbrew/extra/aws-vault"
+  end
 
   def install
     ENV["GOOS"] = OS.mac? ? "darwin" : "linux"
@@ -18,6 +19,12 @@ class GdsCli < Formula
     system "go", "generate"
     system "go", "build"
     bin.install "gds-cli"
+  end
+
+  def caveats
+    if OS.mac?
+      return 'gds-cli depends on aws-vault being installed.  You can install it with `brew cask install aws-vault`.'
+    end
   end
 
   test do
