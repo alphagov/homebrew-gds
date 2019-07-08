@@ -8,7 +8,7 @@ class GdsCli < Formula
   head "git@github.com:alphagov/gds-cli.git", :using => :git
 
   depends_on "go" => :build
-  unless OS.mac?
+  if OS.linux?
     depends_on "linuxbrew/extra/aws-vault"
   end
 
