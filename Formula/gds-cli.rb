@@ -16,8 +16,8 @@ class GdsCli < Formula
     ENV["GOOS"] = OS.mac? ? "darwin" : "linux"
     ENV["GOARCH"] = "amd64"
 
-    system "go", "generate"
-    system "go", "build"
+    system "make"
+
     bin.install "gds-cli"
     bin.install_symlink({ "gds-cli" => "gds" })
   end
