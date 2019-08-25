@@ -9,7 +9,7 @@ class GdsCli < Formula
 
   depends_on "go" => :build
   depends_on "awscli"
-  depends_on "linuxbrew/extra/aws-vault" if OS.linux?
+  depends_on "aws-vault" if OS.linux?
 
   def install
     ENV["GOOS"] = OS.mac? ? "darwin" : "linux"
