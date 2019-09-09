@@ -17,8 +17,8 @@ class GdsCli < Formula
 
     system "make"
 
-    bin.install "gds-cli"
-    bin.install_symlink("gds-cli" => "gds")
+    bin.install "gds"
+    bin.install_symlink("gds" => "gds-cli")
   end
 
   def caveats
