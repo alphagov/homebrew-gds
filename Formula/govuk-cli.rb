@@ -7,7 +7,6 @@ class GovukCli < Formula
   head "https://github.com/alphagov/govuk-cli.git"
 
   def install
-    bin.install "bin/govuk-connect"
-    bin.install "bin/govuk"
+    system "make", "install", "DESTDIR=#{ENV['HOMEBREW_FORMULA_PREFIX']}"
   end
 end
