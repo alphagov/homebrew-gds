@@ -3,11 +3,10 @@ class GovukCli < Formula
   homepage "https://github.com/alphagov/govuk-cli.git"
   # The repo doesn't tag versions (yet).
   url "https://github.com/alphagov/govuk-cli.git"
-  version "0.0.1"
+  version "0.0.2"
   head "https://github.com/alphagov/govuk-cli.git"
 
   def install
-    bin.install "bin/govuk-connect"
-    bin.install "bin/govuk"
+    system "make", "install", "DESTDIR=#{ENV['HOMEBREW_FORMULA_PREFIX']}"
   end
 end
