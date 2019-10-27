@@ -19,6 +19,10 @@ class GdsCli < Formula
 
     bin.install "gds"
     bin.install_symlink("gds" => "gds-cli")
+
+    output = Utils.popen_read("#{bin}/gds-cli bash-completion")
+    (bash_completion/"gds-cli").write output
+    (bash_completion/"gds").write output
   end
 
   def caveats
