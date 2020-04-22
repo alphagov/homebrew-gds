@@ -23,6 +23,10 @@ class GdsCli < Formula
     output = Utils.popen_read("#{bin}/gds-cli bash-completion")
     (bash_completion/"gds-cli").write output
     (bash_completion/"gds").write output
+
+    output = Utils.popen_read("#{bin}/gds-cli zsh-completion")
+    (zsh_completion/"_gds-cli").write output
+    (zsh_completion/"_gds").write output
   end
 
   def caveats
