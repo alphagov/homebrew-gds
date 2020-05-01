@@ -4,7 +4,7 @@ class GovukConnect < Formula
   url "https://rubygems.org/downloads/govuk-connect-0.1.0.gem"
   sha256 "f713356586df0d4438bb5cb20d7f41d927c1d84f79419600fe94497c3067d667"
 
-  uses_from_macos "ruby"
+  depends_on "ruby"
 
   def install
     ENV["GEM_HOME"] = libexec
