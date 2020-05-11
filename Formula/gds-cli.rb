@@ -8,8 +8,8 @@ class GdsCli < Formula
   head "git@github.com:alphagov/gds-cli.git", :using => :git
 
   depends_on "go" => :build
-  depends_on "awscli"
   depends_on "aws-vault" if OS.linux?
+  depends_on "awscli"
 
   def install
     ENV["GOOS"] = OS.mac? ? "darwin" : "linux"
