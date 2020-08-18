@@ -5,7 +5,9 @@ class GdsCli < Formula
       :using    => :git,
       :tag      => "v2.22.0",
       :revision => "7d89fe98e8bf3f9f99ff48383311b75540c18497"
-  head "git@github.com:alphagov/gds-cli.git", :using => :git
+  head "git@github.com:alphagov/gds-cli.git",
+      :using => :git,
+      :branch => "main"
 
   depends_on "go" => :build
   depends_on "aws-vault" if OS.linux?
