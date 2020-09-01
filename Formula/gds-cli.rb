@@ -2,12 +2,12 @@ class GdsCli < Formula
   desc "CLI for common commands used by Government Digital Service staff"
   homepage "https://github.com/alphagov/gds-cli"
   url "git@github.com:alphagov/gds-cli.git",
-      :using    => :git,
-      :tag      => "v2.24.0",
-      :revision => "6808b715648b03c753f9c5e020fc53e4ef6c9e00"
+      using:    :git,
+      tag:      "v2.24.0",
+      revision: "6808b715648b03c753f9c5e020fc53e4ef6c9e00"
   head "git@github.com:alphagov/gds-cli.git",
-      :using => :git,
-      :branch => "main"
+      using:  :git,
+      branch: "main"
 
   depends_on "go" => :build
   depends_on "aws-vault" if OS.linux?
