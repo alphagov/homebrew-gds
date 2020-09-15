@@ -1,8 +1,8 @@
 class GovukConnect < Formula
   desc "Tool for GDS staff to connect to GOV.UK infrastructure"
   homepage "https://github.com/alphagov/govuk-connect"
-  url "https://rubygems.org/downloads/govuk-connect-0.3.3.gem"
-  sha256 "fe93d97e12e72af0dba19b81032e9fa56e75ad24ae99ca6b6ce5b0d02229d467"
+  url "https://rubygems.org/downloads/govuk-connect-0.4.0.gem"
+  sha256 "212facd48906fbd2442d085187c1b6bf76c026b61ecacdc49e901f10c6a85204"
 
   bottle :unneeded
 
