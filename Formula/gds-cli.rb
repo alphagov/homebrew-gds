@@ -34,7 +34,7 @@ class GdsCli < Formula
   def caveats
     return if OS.linux?
 
-    "gds-cli depends on aws-vault being installed.  You can install it with `brew cask install aws-vault`."
+    "gds-cli depends on aws-vault being installed.  You can install it with `brew install --cask aws-vault`."
   end
 
   test do
