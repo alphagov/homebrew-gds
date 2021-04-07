@@ -22,11 +22,11 @@ class GdsCli < Formula
     bin.install "gds"
     bin.install_symlink("gds" => "gds-cli")
 
-    output = Utils.safe_popen_read("#{bin}/gds-cli bash-completion")
+    output = Utils.safe_popen_read("#{bin}/gds-cli", "bash-completion")
     (bash_completion/"gds-cli").write output
     (bash_completion/"gds").write output
 
-    output = Utils.safe_popen_read("#{bin}/gds-cli zsh-completion")
+    output = Utils.safe_popen_read("#{bin}/gds-cli", "zsh-completion")
     (zsh_completion/"_gds-cli").write output
     (zsh_completion/"_gds").write output
   end
