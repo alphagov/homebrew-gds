@@ -16,7 +16,7 @@ class GdsCli < Formula
 
   def install
     ENV["GOOS"] = OS.mac? ? "darwin" : "linux"
-    ENV["GOARCH"] = "amd64"
+    ENV["GOARCH"] = `uname -m`.strip == "x86_64" ? "amd64" : "arm64"
 
     system "make"
 
