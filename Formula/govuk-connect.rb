@@ -4,8 +4,6 @@ class GovukConnect < Formula
   url "https://rubygems.org/downloads/govuk-connect-0.5.0.gem"
   sha256 "b983608ed5b324fd344bec20217a65cc29ecfcbb9066bb8199e682150ba9ab3b"
 
-  bottle :unneeded
-
   depends_on "ruby"
 
   def install
