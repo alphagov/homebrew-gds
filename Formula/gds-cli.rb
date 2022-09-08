@@ -3,8 +3,8 @@ class GdsCli < Formula
   homepage "https://github.com/alphagov/gds-cli"
   url "git@github.com:alphagov/gds-cli.git",
       using:    :git,
-      tag:      "v5.38.0",
-      revision: "35d2488a60797c5d7904603d5943ca315ba748ac"
+      tag:      "v5.39.0",
+      revision: "6f6799463cb4be298b197a3a1a22f331c16a319b"
   head "git@github.com:alphagov/gds-cli.git",
       using:  :git,
       branch: "main"
