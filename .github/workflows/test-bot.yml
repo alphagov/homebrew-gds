@@ -2,16 +2,18 @@ name: brew test-bot
 on:
   pull_request:
     paths:
-      - "Formula/govuk-connect.rb"
+      - "Formula/gds-cli.rb"
   push:
     paths:
-      - "Formula/govuk-connect.rb"
+      - "Formula/gds-cli.rb"
 jobs:
   test-bot:
     runs-on: macos-latest
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+        with:
+          show-progress: false
       - name: Run brew test-bot
         run: |
           set -e
@@ -20,4 +22,4 @@ jobs:
           mkdir -p "$HOMEBREW_TAP_DIR"
           rm -rf "$HOMEBREW_TAP_DIR"
           ln -s "$PWD" "$HOMEBREW_TAP_DIR"
-          brew test-bot govuk-connect
+          brew test-bot gds-cli
