@@ -19,8 +19,7 @@ jobs:
         run: |
           set -e
           brew update
-          HOMEBREW_TAP_DIR="/usr/local/Homebrew/Library/Taps/alphagov/homebrew-gds"
+          HOMEBREW_TAP_DIR="/usr/local/Homebrew/Library/Taps/alphagov/homebrew-gds/Formula"
           mkdir -p "$HOMEBREW_TAP_DIR"
-          rm -rf "$HOMEBREW_TAP_DIR"
-          ln -s "$PWD" "$HOMEBREW_TAP_DIR"
+          ln -s "$PWD/Formula" "$HOMEBREW_TAP_DIR" 
           brew test-bot gds-cli
