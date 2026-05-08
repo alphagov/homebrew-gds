@@ -4,14 +4,14 @@ cask "govuk-cli" do
 
   on_macos do
     on_intel do
-      sha256 "5072fd2e374505aa4948f0ea4e6440a432c74cb9413236bb3358eb4957312d21"
-      url "https://github.com/alphagov/govuk-cli/releases/download/v#{version}/govuk_Darwin_x86_64"
-      binary "govuk_Darwin_x86_64", target: "govuk-cli"
+      sha256 "13b7397462f59681e7e67efac198e4c540faf6bfb0777761b6895703ed71b4d9"
+      url "https://github.com/alphagov/govuk-cli/releases/download/v#{version}/govuk-cli_Darwin_x86_64"
+      binary "govuk-cli_Darwin_x86_64", target: "govuk"
     end
     on_arm do
-      sha256 "3d0bddbcf4eaf4fbe4ca0822b0036f2ec1e5b3dc6c3c47f77e7338faabcb1dcf"
-      url "https://github.com/alphagov/govuk-cli/releases/download/v#{version}/govuk_Darwin_arm64"
-      binary "govuk_Darwin_arm64", target: "govuk-cli"
+      sha256 "e029cd646e70f96a28218fe2bb0ddba7656cefb0914c24c0d713585f3f142add"
+      url "https://github.com/alphagov/govuk-cli/releases/download/v#{version}/govuk-cli_Darwin_arm64"
+      binary "govuk-cli_Darwin_arm64", target: "govuk"
     end
   end
 
@@ -23,7 +23,7 @@ cask "govuk-cli" do
     skip "Auto-generated on release."
   end
 
-  generate_completions_from_executable "govuk", "completions",
+  generate_completions_from_executable "govuk-cli", "completions",
     shell_parameter_format: :cobra,
     shells: [:bash, :zsh, :fish]
 
