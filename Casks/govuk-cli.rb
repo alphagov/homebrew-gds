@@ -4,12 +4,12 @@ cask "govuk-cli" do
 
   on_macos do
     on_intel do
-      sha256 "b38e5c33deee2a2123018d354e1a97ede3ee929eee4f5857113e5911f800e209"
+      sha256 "a2b3ac846bf104751e1e5251a587afeea1f133765319ccbd7ff8d45e73fc1d8b"
       url "https://github.com/alphagov/govuk-cli/releases/download/v#{version}/govuk_Darwin_x86_64"
       binary "govuk_Darwin_x86_64", target: "govuk-cli"
     end
     on_arm do
-      sha256 "92dd90246e470be964c7056a2eb7beab1f301908dacd0d1d6bfbfe9a0d1a821b"
+      sha256 "1f1a1ef139473f0ad3c4be43d082c28af451fedf6512b74bd7fbe0f6e0c4bf70"
       url "https://github.com/alphagov/govuk-cli/releases/download/v#{version}/govuk_Darwin_arm64"
       binary "govuk_Darwin_arm64", target: "govuk-cli"
     end
