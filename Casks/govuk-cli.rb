@@ -3,22 +3,28 @@ cask "govuk-cli" do
   version "0.0.1"
 
   on_macos do
-    sha256 "cbe67e590cbb67051c3f21954567e5aa1653d6412a97dd4352e8212b1a9e8000"
-    url "https://github.com/alphagov/govuk-cli/releases/download/v#{version}/govuk-cli_Darwin_all"
-    binary "govuk-cli_Darwin_all", target: "govuk-cli"
+    sha256 "a0b44d13fdd0cd82e7f4642a2c06a2240eab4d0a099681af4a7607f720bbae73"
+    url "https://github.com/alphagov/govuk-cli/releases/download/v#{version}/govuk-cli_Darwin_all.tar.gz"
   end
 
   name "govuk-cli"
   desc ""
-  homepage ""
+  homepage "https://github.com/alphagov/govuk-cli"
 
   livecheck do
     skip "Auto-generated on release."
   end
 
-  generate_completions_from_executable "govuk-cli_Darwin_all", "completions",
-    shell_parameter_format: :cobra,
-    shells: [:bash, :zsh, :fish]
+  binary "govuk-cli"
+  bash_completion "completions/govuk-cli.bash"
+  fish_completion "completions/govuk-cli.fish"
+  zsh_completion "completions/govuk-cli.zsh"
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/govuk-cli_Darwin_all"]
+    end
+  end
 
   # No zap stanza required
 
