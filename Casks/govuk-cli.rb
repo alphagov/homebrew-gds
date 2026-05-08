@@ -3,7 +3,7 @@ cask "govuk-cli" do
   version "0.0.1"
 
   on_macos do
-    sha256 "08223fb1e3c17701f28cfcc91e37ad63eca0804a822ad9908693f2a4f438de31"
+    sha256 "438c605654f8c14c21d49ec5371ed32742958bf0f00533ac53fff3c711cd4a6a"
     url "https://github.com/alphagov/govuk-cli/releases/download/v#{version}/govuk-cli_Darwin_all.tar.gz"
   end
 
@@ -22,7 +22,7 @@ cask "govuk-cli" do
 
   postflight do
     if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/govuk-cli_Darwin_all"]
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/govuk-cli"]
     end
   end
 
