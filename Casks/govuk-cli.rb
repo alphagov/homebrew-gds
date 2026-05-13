@@ -3,7 +3,7 @@ cask "govuk-cli" do
   version "0.0.2"
 
   on_macos do
-    sha256 "210f728f98004e2524bfdaf66c80665ed3525cf4b3272af37f0b13fff8992493"
+    sha256 "b61d7658914ed8b07e8affb8b2a5fdb603c0e87d023c5f2b5a9b29256f60033c"
     url "https://github.com/alphagov/govuk-cli/releases/download/v#{version}/govuk-cli_Darwin_all.tar.gz"
   end
 
